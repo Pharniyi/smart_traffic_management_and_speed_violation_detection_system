@@ -1,7 +1,17 @@
 import axios from "axios"
 
-// Base API configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.trafficmonitor.com"
+// Base API configuration - handle different environments
+const getApiBaseUrl = () => {
+  // For GitHub Pages, use the full external API URL
+  if (typeof window !== "undefined" && window.location.hostname.includes("github.io")) {
+    return "https://traffic-control-system-production.up.railway.app"
+  }
+
+  // For Vercel or local development
+  return process.env.NEXT_PUBLIC_API_BASE_URL || "https://traffic-control-system-production.up.railway.app"
+}
+
+const API_BASE_URL = getApiBaseUrl()
 
 // New Traffic Data Types based on the provided JSON structure
 export interface TrafficDensityItem {
@@ -33,7 +43,7 @@ export const apiService = {
   // Traffic Data APIs
   async getTrafficData(): Promise<TrafficDensityItem[]> {
     try {
-      const response = await axios.get(`https://traffic-control-system-production.up.railway.app/TrafficControlSystem/TrafficDensity/GetAllTrafficDensitys`, {
+      const response = await axios.get(`${API_BASE_URL}/TrafficControlSystem/TrafficDensity/GetAllTrafficDensitys`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -56,14 +66,11 @@ export const apiService = {
   // Violations API - Fetch all violations (filtering done on frontend)
   async getAllViolations(): Promise<ViolationResponse[]> {
     try {
-      const response = await axios.get(
-        "https://traffic-control-system-production.up.railway.app/TrafficControlSystem/Violation/GetAllViolations",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+      const response = await axios.get(`${API_BASE_URL}/TrafficControlSystem/Violation/GetAllViolations`, {
+        headers: {
+          "Content-Type": "application/json",
         },
-      )
+      })
 
       console.log("All violations response:", response.data.violations)
       return response.data.violations || []
