@@ -8,6 +8,6 @@ A smart based traffic monitoring application with real-time data visualization a
 - **Branch**: `gh-pages` (auto-generated)
 - **Deployment**: Automatic via GitHub Actions on push to `main`
 
- ![Image Alt](https://raw.githubusercontent.com/Pharniyii/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic1.jpg)
-  ![Image Alt](https://raw.githubusercontent.com/Pharniyii/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic2.jpg)
-   ![Image Alt](https://raw.githubusercontent.com/Pharniyii/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic3.jpg)
+ ![Image Alt](https://raw.githubusercontent.com/Pharniyi/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic1.jpg)
+  ![Image Alt](https://raw.githubusercontent.com/Pharniyi/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic2.jpg)
+   ![Image Alt](https://raw.githubusercontent.com/Pharniyi/smart_traffic_management_and_speed_violation_detection_system/main/smarttraffic3.jpg)
