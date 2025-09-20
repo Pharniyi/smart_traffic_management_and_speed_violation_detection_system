@@ -1,10 +1,7 @@
 # Smart Traffic Management and Speed Violation Detection System
 
-A Next.js-based traffic monitoring application with real-time data visualization and violation tracking.
+A smart based traffic monitoring application with real-time data visualization and violation tracking.
 
-## 🚀 Deployment
-
-This project is configured for dual deployment:
 
 ### GitHub Pages (Static Site)
 - **URL**: `https://pharniyii.github.io/smart_traffic_management_and_speed_violation_detection_system/`
